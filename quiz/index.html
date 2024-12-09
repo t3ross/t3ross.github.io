@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Preguntas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      main {
+        margin: 20px auto;
+        max-width: 600px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .resultado {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #2196f3;
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Juego de Preguntas</h1>
+    </header>
+
+    <main>
+      <button onclick="startGame()">Iniciar Juego</button>
+
+      <div id="resultado" class="resultado" style="display: none">
+        <p id="mensajeResultado"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Juego de Preguntas</p>
+    </footer>
+
+    <script>
+      let respuesta1 = prompt("¿Colón descubrió América? (si/no)");
+      if (respuesta1.toLowerCase() === "si") {
+        let respuesta2 = prompt(
+          "¿La independencia de México fue en el año 1810? (si/no)"
+        );
+        if (respuesta2.toLowerCase() === "si") {
+          let respuesta3 = prompt(
+            "¿The Doors fue un grupo de rock americano? (si/no)"
+          );
+          if (respuesta3.toLowerCase() === "si") {
+            document.getElementById("resultado").style.display = "block";
+            document.getElementById("mensajeResultado").textContent =
+              "¡Has ganado el juego!";
+          } else {
+            document.getElementById("resultado").style.display = "block";
+            document.getElementById("mensajeResultado").textContent =
+              "Has perdido el juego.";
+          }
+        } else {
+          document.getElementById("resultado").style.display = "block";
+          document.getElementById("mensajeResultado").textContent =
+            "Has perdido el juego.";
+        }
+      } else {
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("mensajeResultado").textContent =
+          "Has perdido el juego.";
+      }
+    </script>
+  </body>
+</html>

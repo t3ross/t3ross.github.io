@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Competencia de Perros</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+      }
+      main {
+        margin: 20px auto;
+        max-width: 900px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      .competencia-perro {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        color: white;
+      }
+      .competencia-perro img {
+        max-width: 100px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+      .competencia-perro p {
+        margin: 0;
+      }
+      .primero {
+        background-color: #ffd700;
+      } /* Dorado */
+      .segundo {
+        background-color: #c0c0c0;
+      } /* Plata */
+      .tercero {
+        background-color: #cd7f32;
+      } /* Bronce */
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #333;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Competencia de Perros</h1>
+    </header>
+
+    <main>
+      <form>
+        <label for="puestoUno">Puesto 1 (raza):</label>
+        <input type="text" id="puestoUno" placeholder="Ej. PITBULL" />
+        <label for="puestoDos">Puesto 2 (raza):</label>
+        <input
+          type="text"
+          id="puestoDos"
+          placeholder="Ej. LABRADOR RETRIEVER"
+        />
+        <label for="puestoTres">Puesto 3 (raza):</label>
+        <input type="text" id="puestoTres" placeholder="Ej. ROTTWHILLER" />
+        <button type="button" id="calcularBtn">
+          Calcular y Mostrar Resultados
+        </button>
+      </form>
+
+      <div id="resultados"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Competencia de Perros</p>
+    </footer>
+
+    <script src="ej.js"></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alquiler de Vehículos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+      }
+      main {
+        margin: 20px auto;
+        max-width: 800px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      .fondo-naranja {
+        background-color: orange;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      .fondo-amarillo {
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .fondo-verde {
+        background-color: green;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      .fondo-azul {
+        background-color: blue;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      .opcion-carro {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .opcion-carro input {
+        margin-right: 10px;
+      }
+      .opcion-carro img {
+        max-width: 100px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input,
+      button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #333;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Servicio de Alquiler de Vehículos</h1>
+    </header>
+
+    <main>
+      <form id="formulario-alquiler">
+        <label>Seleccione el vehículo que desea alquilar:</label>
+
+        <div class="opcion-carro">
+          <input
+            type="radio"
+            name="vehiculo"
+            class="vehiculo"
+            value="BMW"
+            id="bmw"
+            required
+          />
+          <label for="bmw">
+            <img
+              src="https://www.bmw.cl/content/dam/bmw/common/all-models/5-series/sedan/2020/models-and-equipment/bmw-5-series-sedan-models-and-equipment-bmw-individual-sd-01.jpg"
+              alt="BMW"
+            />
+            BMW
+          </label>
+        </div>
+
+        <div class="opcion-carro">
+          <input
+            type="radio"
+            name="vehiculo"
+            class="vehiculo"
+            value="MAGANE"
+            id="magane"
+          />
+          <label for="magane">
+            <img
+              src="https://neomotor.epe.es/binrepository/imagen1945_NM1946_MG7722417.jpeg"
+              alt="Magane"
+            />
+            Magane
+          </label>
+        </div>
+
+        <div class="opcion-carro">
+          <input
+            type="radio"
+            name="vehiculo"
+            class="vehiculo"
+            value="MERCEDES"
+            id="mercedes"
+          />
+          <label for="mercedes">
+            <img
+              src="https://www.elcarrocolombiano.com/wp-content/uploads/2022/05/31052022-PORTADA-Mercedes-AMG-E-63-S-Final-Edition.jpg"
+              alt="Mercedes"
+            />
+            Mercedes
+          </label>
+        </div>
+
+        <div class="opcion-carro">
+          <input
+            type="radio"
+            name="vehiculo"
+            class="vehiculo"
+            value="TWINGO"
+            id="twingo"
+          />
+          <label for="twingo">
+            <img
+              src="https://fotos.perfil.com/2024/10/16/renault-twingo-1892253.jpg"
+              alt="Twingo"
+            />
+            Twingo
+          </label>
+        </div>
+
+        <div class="opcion-carro">
+          <input
+            type="radio"
+            name="vehiculo"
+            class="vehiculo"
+            value="CHEVROLET AVEO"
+            id="chevrolet-aveo"
+          />
+          <label for="chevrolet-aveo">
+            <img
+              src="https://chevroletriogrande.com/aveo/img/a-gris-satin.jpg"
+              alt="Chevrolet Aveo"
+            />
+            Chevrolet Aveo
+          </label>
+        </div>
+
+        <label for="dias">Número de días que desea alquilar:</label>
+        <input type="number" id="dias" name="dias" min="1" required />
+
+        <label>¿Desea incluir seguro del 5%?</label>
+        <div>
+          <input
+            type="radio"
+            name="seguro"
+            value="si"
+            id="seguro-si"
+            required
+          />
+          <label for="seguro-si">Sí</label>
+
+          <input type="radio" name="seguro" value="no" id="seguro-no" />
+          <label for="seguro-no">No</label>
+        </div>
+
+        <button type="submit">Calcular Costo</button>
+      </form>
+    </main>
+
+    <div id="resultado"></div>
+
+    <footer>
+      <p>© 2024 Servicio de Alquiler de Vehículos</p>
+    </footer>
+
+    <script src="ej.js"></script>
+  </body>
+</html>
